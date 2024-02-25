@@ -9,5 +9,10 @@ import { ItemMenuComponent } from './item-menu/item-menu.component'
     styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
+    protected currentSection: string = 'categories' // operations, analytics
 
+    protected changeCurrentSection( event: any ) {
+        const inputValue = event.target.value
+        console.log( "changeCurrentSection", inputValue )
+    }
 }

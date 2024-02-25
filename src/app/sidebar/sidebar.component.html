@@ -1,2 +1,11 @@
-<p>sidebar works!</p>
-<app-item-menu></app-item-menu>
+<section>
+    <div>
+        <button>Добавить операцию</button>
+    
+        <nav (click)="changeCurrentSection( $event )">
+            <app-item-menu value="categories"></app-item-menu>
+            <app-item-menu value="operations"></app-item-menu>
+            <app-item-menu value="analytics"></app-item-menu>
+        </nav>
+    </div>
+</section>
