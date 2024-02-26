@@ -1,4 +1,5 @@
-<p>main works!</p>
-<app-categories></app-categories>
-<app-operations></app-operations>
-<app-analytics></app-analytics>
+<div [ngSwitch]="currentSection">
+    <app-categories *ngSwitchCase="'categories'" ></app-categories>
+    <app-operations *ngSwitchCase="'operations'" ></app-operations>
+    <app-analytics *ngSwitchCase="'analytics'" ></app-analytics>
+</div>
