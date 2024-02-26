@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ItemMenuComponent {
     @Input( { required: true } ) value:string = '';
+    @Input() checked: boolean = false
 }

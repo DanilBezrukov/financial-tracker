@@ -1,7 +1,5 @@
-<label>
-    <input [value]="value" name="item-menu" type="radio">
-    <div>
-        <span></span>
-        <span></span>
-    </div>
+<label class="item-menu">
+    <input class="item-menu__input" [value]="value" name="item-menu" type="radio" [checked]="checked">
+    <div class="item-menu__icon"></div>
+    <div class="item-menu__title"> <ng-content></ng-content> </div>
 </label>

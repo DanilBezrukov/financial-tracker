@@ -1,0 +1,41 @@
+.sidebar-wrapper {
+    width: 405px;
+    height: 100%;
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.addOperation-btn {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 55px;
+    padding-left: 10px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 150ms;
+    &:hover {
+        background-color: #F4F7FA;
+    }
+}
+.addOperation-btn__lable{
+    width: 35px;
+    height: 35px;
+    background-color: #858C9B;
+    border-radius: 50%;
+}
+.addOperation-btn__title{
+    color: #0A0A0A;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

@@ -1,11 +1,14 @@
-<section>
-    <div>
-        <button>Добавить операцию</button>
+<section class="sidebar-wrapper">
+    <div class="sidebar">
+        <button class="addOperation-btn">
+            <span class="addOperation-btn__lable"></span>
+            <span class="addOperation-btn__title">Добавить операцию</span>
+        </button>
     
-        <nav (click)="changeCurrentSection( $event )">
-            <app-item-menu value="categories"></app-item-menu>
-            <app-item-menu value="operations"></app-item-menu>
-            <app-item-menu value="analytics"></app-item-menu>
+        <nav (change)="changeCurrentSection( $event )">
+            <app-item-menu [checked]="true" value="categories">Категории</app-item-menu>
+            <app-item-menu value="operations">Операции</app-item-menu>
+            <app-item-menu value="analytics">Аналитика</app-item-menu>
         </nav>
     </div>
 </section>
