@@ -1,0 +1,40 @@
+@mixin main-header-styles {
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .title {
+        color: #0A0A0A;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 50px;
+    }
+    .btn {
+        cursor: pointer;
+        display: flex;
+        color: #1F5ED7;
+        height: 50px;
+        padding: 0 40px;
+        align-items: center;
+        gap: 15px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 1px solid currentColor;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        transition: all 150ms;
+        &:hover {
+            background-color: #1F5ED7;
+            border-color: #1F5ED7;
+            color: #fff;
+        }
+    }
+    .hr {
+        margin: 30px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10); 
+    }
+}

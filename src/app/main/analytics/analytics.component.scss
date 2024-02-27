@@ -1,0 +1,4 @@
+@import '../main-mixins.component.scss';
+.main {
+    @include main-header-styles;
+}
