@@ -7,8 +7,6 @@ import { AnalyticalPointComponent } from './analytical-point/analytical-point.co
     imports: [AnalyticalPointComponent],
     templateUrl: './analytics.component.html',
     styleUrl: './analytics.component.scss'
-    // styleUrl: './dop.component.scss'
-    // styleUrl: './analytics.component.scss' && './dop.component.scss',
 })
 export class AnalyticsComponent {
 
