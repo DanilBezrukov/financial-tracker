@@ -1,5 +1,19 @@
-<div class="main-wrapper" [ngSwitch]="currentSection">
-    <app-categories *ngSwitchCase="'categories'" ></app-categories>
-    <app-operations *ngSwitchCase="'operations'" ></app-operations>
-    <app-analytics *ngSwitchCase="'analytics'" ></app-analytics>
+<!--<div class="main-wrapper" [ngSwitch]="currentSection">-->
+<!--    <app-categories *ngSwitchCase="'categories'" ></app-categories>-->
+<!--    <app-operations *ngSwitchCase="'operations'" ></app-operations>-->
+<!--    <app-analytics *ngSwitchCase="'analytics'" ></app-analytics>-->
+<!--</div>-->
+<div class="main-wrapper">
+  @switch (currentSection) {
+    @case ('categories') {
+      <app-categories></app-categories>
+    }
+    @case ('operations') {
+      <app-operations></app-operations>
+    }
+    @case ('analytics') {
+      <app-analytics></app-analytics>
+    }
+  }
 </div>
+

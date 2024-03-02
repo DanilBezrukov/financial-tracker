@@ -1,8 +1,4 @@
-<!-- <button (click)="mapShow()">Show map</button>
-<div>
-    <span *ngFor=" let item of this.myStore.values()"> {{ item[0].comment }} {{ item[0].sum }} </span>
-</div> -->
 <div class="app-wrapper">
-    <app-sidebar [myStore]="myStore" [(currentSection)]="currentSection" ></app-sidebar>
+    <app-sidebar (onCurrentSection)="changeCurrentSection( $event ) " ></app-sidebar>
     <app-main [currentSection]="currentSection" ></app-main>
 </div>`

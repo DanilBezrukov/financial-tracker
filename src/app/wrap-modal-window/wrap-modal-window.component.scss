@@ -1,0 +1,38 @@
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.dark-area {
+    position: relative;
+    background-color: #0A0A0A;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+.modalWindows {
+    position: absolute;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.closing-cross {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+    &:hover path {
+        transition: all 150ms;
+        stroke-opacity: 1;
+    }
+}
