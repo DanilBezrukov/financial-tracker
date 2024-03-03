@@ -22,6 +22,7 @@ export class AddingCategoryComponent {
     onChangeActivity( flag:boolean ):void {
         this.isActivePopup = flag
         this.isActivePopupChange.emit( this.isActivePopup )
+        this.form.reset()
     }
     protected form = new FormGroup({
         text: new FormControl('', Validators.required),

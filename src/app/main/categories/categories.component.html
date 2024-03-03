@@ -10,10 +10,15 @@
             <span>Добавить категорию</span>
         </button>
     </div>
-    <hr class="hr">
-    <div class="main-body">
-        @for ( key of myStore?.keys(); track key){
-            <div>{{key}}</div>
+    <hr class="hr" >
+    <div class="main-body custom-scrolling" [ngClass]=" myStore?.size ? 'grid' : 'block' ">
+        @for ( category of myStore?.entries(); track category[0]){
+            <app-category
+                [nameCategory]="category[0]"
+                [data] = "category[1]"
+            ></app-category>
+        } @empty {
+            <div class="simple-body">Категорий пока нет!</div>
         }
     </div>
 </div>

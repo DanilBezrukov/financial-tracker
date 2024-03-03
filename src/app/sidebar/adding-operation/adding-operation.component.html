@@ -1,0 +1,43 @@
+<app-wrap-modal-window [isActive]="isActivePopup" (onChangeActivity)="onChangeActivity( $event )">
+    <form class="container-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p class="title">Новая операция</p>
+        <div>
+            <input  placeholder="0 ₽" class="input-text" type="number" formControlName="sum">
+        </div>
+        <div class="categories">
+            <p class="sub-title">На что потратили?</p>
+            <div class="categories-elements custom-scrolling" >
+<!--                <input type="hidden" formControlName="category">-->
+                @for (elem of myStore?.entries(); track elem[0]; let idx  = $index ){
+                    <div class="category-item">
+                        <input
+                            class="category-item__radio"
+                            type="radio"
+                            name="category"
+                            [value]="elem[0]"
+                            [id]="'item-radio' + idx "
+                            formControlName="category"
+                        >
+                        <label class="category-item__label" [for]="'item-radio' + idx">
+                            <p class="category-item__label__title">{{ elem[0] }}</p>
+                            <div class="category-item__label__icon" [ngStyle]="{'backgroundColor': elem[1].color }"></div>
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div>
+            <input placeholder="Напишите комментарий" class="input-text" type="text" formControlName="comment">
+        </div>
+
+<!--        <div class="input-elements">-->
+<!--            <input  class="input-text" type="text" name="myText" formControlName="text">-->
+<!--            <div class="color-wrapper">-->
+<!--                <input type="color" formControlName="color" >-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <button type="submit" class="btn" [disabled]="!form.valid" >Создать</button>
+
+    </form>
+</app-wrap-modal-window>

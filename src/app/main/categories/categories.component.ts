@@ -2,11 +2,12 @@ import {Component, Input} from '@angular/core';
 import { CategoryComponent } from './category/category.component'
 import {AddingCategoryComponent, Category} from "./adding-category/adding-category.component";
 import { MyStore } from "../../app.component";
+import {NgClass} from "@angular/common";
 
 @Component({
     selector: 'app-categories',
     standalone: true,
-    imports: [CategoryComponent, AddingCategoryComponent],
+    imports: [CategoryComponent, AddingCategoryComponent, NgClass],
     templateUrl: './categories.component.html',
     styleUrl: './categories.component.scss'
 })
@@ -16,9 +17,15 @@ export class CategoriesComponent {
 
     addCategory( event:Category ):void {
         if ( this.myStore?.has( event.text ) ) return
-        this.myStore?.set( event.text, [{
+        this.myStore?.set( event.text, {
             color: event.color,
-            date: Date.now()
-        }])
+            operations: [
+                {
+                    date: Date.now(),
+                    sum: 0,
+                    comment: ''
+                }
+            ]
+        })
     }
 }

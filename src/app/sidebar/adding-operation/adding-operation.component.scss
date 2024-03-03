@@ -1,0 +1,119 @@
+.container-form {
+    width: 540px;
+    color: #0A0A0A;
+}
+.title {
+    text-align: left;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+.sub-title {
+    text-align: left;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+.input-text {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(10, 10, 10, 0.20);
+    background: #FFF;
+    margin-bottom: 25px;
+    transition: border-color 150ms;
+    &::placeholder {
+        color: rgba(10, 10, 10, 0.40);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &:hover, &:focus {
+        outline: none;
+        border-color: #1F5ED7;
+    }
+}
+.categories {
+    margin-bottom: 25px;
+}
+.categories-elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 101px);
+    grid-template-rows:repeat(auto-fill, 104px);
+    row-gap: 10px;
+    border-radius: 10px;
+    background: #F5F6F7;
+    height: 238px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.category-item {
+    width: 101px;
+    height: 104px;
+    &__radio {
+        display: none;
+        &:checked ~ .category-item__label {
+            border: 1px solid #1F5ED7;
+        }
+    }
+    &__label {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        transition: background-color 150ms;
+
+        &__title {
+            width: 120%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: initial;
+            color: rgba(10, 10, 10, 0.50);
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        &__icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #CBD1DC;
+        }
+    }
+}
+.btn{
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #1F5ED7;
+    border: none;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: background-color 150ms ;
+    &:disabled {
+        cursor: default;
+        background-color: rgba(31, 94, 215, 0.30);
+    }
+    &:not(:disabled):hover {
+        background-color:  #0941AB;
+    }
+}

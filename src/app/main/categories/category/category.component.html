@@ -1,1 +1,5 @@
-<p>category works!</p>
+<div class="container-category">
+    <p class="title">{{ nameCategory }}</p>
+    <div class="icon" [ngStyle]="{ 'backgroundColor' : data.color }" ></div>
+    <div class="sum">{{ getSumCategory() }} ₽</div>
+</div>

@@ -1,0 +1,45 @@
+.container-category {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 101px;
+    min-height: 123px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 150ms;
+    &:hover {
+        background-color: #F4F7FA;
+    }
+}
+.title {
+    width: 120%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    color: rgba(10, 10, 10, 0.50);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 7px;
+}
+.sum {
+    width: 120%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    color: #0A0A0A;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

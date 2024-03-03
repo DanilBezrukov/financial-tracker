@@ -1,4 +1,16 @@
+<div style="position: fixed;top: 0;right: 0">
+    <button (click)="fillMyStore()">Заполнить Store</button>
+    <button (click)="myStore.clear()">Очистить Store</button>
+</div>
 <div class="app-wrapper">
-    <app-sidebar (onCurrentSection)="changeCurrentSection( $event ) " ></app-sidebar>
-    <app-main [myStore]="myStore" [currentSection]="currentSection" ></app-main>
+    <app-sidebar
+        [myStore]="myStore"
+        (onCurrentSection)="changeCurrentSection( $event ) "
+    ></app-sidebar>
+
+    <app-main
+        [myStore]="myStore"
+        [currentSection]="currentSection"
+    ></app-main>
 </div>`
+
