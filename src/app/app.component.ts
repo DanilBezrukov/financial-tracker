@@ -1,11 +1,16 @@
-import {Component, EventEmitter} from '@angular/core';
+import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainComponent } from './main/main.component'
 import { SidebarComponent } from './sidebar/sidebar.component'
 interface MyStoreItem {
-  comment: string;
-  sum: string;
+    comment?: string;
+    sum?: string;
+    color?: string
+    date?: number
 }
+
+export type MyStore = Map< string, MyStoreItem[]>
+
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -18,8 +23,15 @@ export class AppComponent {
     changeCurrentSection( value: string ):void {
       this.currentSection = value
     }
-    protected myStore: Map< string, MyStoreItem[] > = new Map([
+    protected myStore: MyStore = new Map([
         [ 'Продукты',  [
+            {
+              comment: "Комментарий",
+              sum: "Сумма"
+            }
+          ]
+        ],
+        [ 'Развлечения',  [
             {
               comment: "Комментарий",
               sum: "Сумма"

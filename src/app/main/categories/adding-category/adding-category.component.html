@@ -1,0 +1,12 @@
+<app-wrap-modal-window [isActive]="isActivePopup" (onChangeActivity)="onChangeActivity( $event )" >
+    <form class="container-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p class="title">Новая категория</p>
+        <div class="input-elements">
+            <input  class="input-text" type="text" name="myText" formControlName="text">
+            <div class="color-wrapper">
+                <input type="color" formControlName="color" >
+            </div>
+        </div>
+        <button type="submit" class="btn" [disabled]="!form.valid" >Создать</button>
+    </form>
+</app-wrap-modal-window>

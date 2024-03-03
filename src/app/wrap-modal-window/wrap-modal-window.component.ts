@@ -9,9 +9,9 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class WrapModalWindowComponent {
     @Input( { required: true } ) isActive!: boolean
-    @Output() isActiveChange: EventEmitter<boolean>  = new EventEmitter<boolean>();
+    @Output() onChangeActivity: EventEmitter<boolean>  = new EventEmitter<boolean>();
     closeWindow(): void {
         this.isActive = false
-        this.isActiveChange.emit( this.isActive )
+        this.onChangeActivity.emit( this.isActive )
     }
 }
