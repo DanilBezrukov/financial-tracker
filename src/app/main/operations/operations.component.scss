@@ -2,3 +2,11 @@
 .main {
     @include main-header-styles;
 }
+.name-category {
+    color: rgba(10, 10, 10, 0.50);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 25px;
+}

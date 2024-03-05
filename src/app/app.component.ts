@@ -5,11 +5,11 @@ import { SidebarComponent } from './sidebar/sidebar.component'
 
 export interface MyStoreItem{
     color: string
-    operations: Array<{
-        comment: string | undefined | null;
+    operations: {
+        comment?: string | null | undefined;
         sum: number;
-        date: number
-    }>
+        date: number;
+    }[];
 }
 
 export type MyStore = Map< string, MyStoreItem>

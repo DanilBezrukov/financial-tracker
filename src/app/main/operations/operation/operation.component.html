@@ -1,1 +1,13 @@
-<p>operation works!</p>
+<div class="operation">
+
+    <div class="description">
+        <div class="avatar"></div>
+        <div class="wrapper">
+            <p class="date">{{ operation.date | date: 'dd LLL, EE': '+3': "ru" }}</p>
+            <p class="comment">{{ operation.comment }}</p>
+        </div>
+    </div>
+
+    <div class="sum">- {{ operation.sum | currency: 'RUB': 'symbol-narrow':'0.2' : 'ru' }}</div>
+
+</div>

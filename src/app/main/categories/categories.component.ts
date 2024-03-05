@@ -19,13 +19,7 @@ export class CategoriesComponent {
         if ( this.myStore?.has( event.text ) ) return
         this.myStore?.set( event.text, {
             color: event.color,
-            operations: [
-                {
-                    date: Date.now(),
-                    sum: 0,
-                    comment: ''
-                }
-            ]
+            operations: []
         })
     }
 }

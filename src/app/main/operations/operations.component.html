@@ -6,23 +6,16 @@
     <hr class="hr">
     <div class="main-body">
         @for ( category of myStore?.entries(); track category[0]){
-            <h2>{{category[0]}}</h2>
-            <br>
-            <div>
-                @for ( operation of category[1].operations; track i ; let i = $index ){
-                    <div>
-                        <p> {{operation.date | date}} </p>
-                        <p> {{operation.sum}} </p>
-                        <p> {{operation.comment}} </p>
-                    </div>
-                    <br>
-<!--                    <ul>-->
-<!--                        <li></li>-->
-<!--                        <li>{{operation.sum}}</li>-->
-<!--                        <li>{{operation.comment}}</li>-->
-<!--                    </ul>-->
-                }
-            </div>
+            @if ( category[1].operations.length ) {
+                <h6 class="name-category">{{category[0]}}</h6>
+                <div>
+                    @for ( operation of category[1].operations; track i ; let i = $index ){
+                        <div>
+                            <app-operation [operation]="operation"></app-operation>
+                        </div>
+                    }
+                </div>
+            }
         }
     </div>
 </div>

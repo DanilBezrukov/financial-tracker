@@ -1,0 +1,45 @@
+.operation {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.description{
+    display: flex;
+    gap: 10px;
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #CBD1DC;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+.date{
+    color: #0A0A0A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+}
+.comment{
+    color: rgba(10, 10, 10, 0.50);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+}
+.sum{
+    color: #0A0A0A;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px; /* 87.5% */
+}
