@@ -4,7 +4,7 @@
         <h3 class="title">Операции</h3>
     </div>
     <hr class="hr">
-    <div class="main-body">
+    <div class="main-body custom-scrolling">
         @for ( category of myStore?.entries(); track category[0]){
             @if ( category[1].operations.length ) {
                 <h6 class="name-category">{{category[0]}}</h6>
@@ -16,6 +16,9 @@
                     }
                 </div>
             }
+        }
+        @if( getFlagSimpleBody() ) {
+            <div>test</div>
         }
     </div>
 </div>

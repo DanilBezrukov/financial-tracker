@@ -1,6 +1,19 @@
 @import '../main-mixins.component.scss';
+:host {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height:100%;
+}
 .main {
+    display: flex;
+    flex-direction: column;
     @include main-header-styles;
+    height: 100%;
+}
+.main-body {
+    height: 100%;
+    overflow-y: scroll;
 }
 .name-category {
     color: rgba(10, 10, 10, 0.50);

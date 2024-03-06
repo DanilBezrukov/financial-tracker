@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainComponent } from './main/main.component'
 import { SidebarComponent } from './sidebar/sidebar.component'
-
 export interface MyStoreItem{
     color: string
     operations: {
@@ -12,7 +11,7 @@ export interface MyStoreItem{
     }[];
 }
 
-export type MyStore = Map< string, MyStoreItem>
+export type MyStore = Map< string, MyStoreItem >
 
 @Component({
     selector: 'app-root',
@@ -24,21 +23,22 @@ export type MyStore = Map< string, MyStoreItem>
 export class AppComponent {
     protected currentSection: string = 'categories'
     changeCurrentSection( value: string ):void {
-      this.currentSection = value
+        this.currentSection = value
     }
     protected myStore: MyStore = new Map()
     fillMyStore():void {
         const generateColor = ():string => '#' + Math.floor(Math.random() * 16777215).toString(16);
-        const generateSum = ():number => Math.floor(Math.random() * 10000 );
+        // const generateSum = ():number => Math.floor(Math.random() * 10000 );
         for (let i = 0; i < 100; i++){
             this.myStore?.set( `Категория${i + 1}`, {
                 color: generateColor(),
                 operations: [
-                    {
-                        date: Date.now(),
-                        sum: generateSum(),
-                        comment: ''
-                    }
+                    
+                    // {
+                    //     date: Date.now(),
+                    //     sum: generateSum(),
+                    //     comment: ''
+                    // }
                 ]
             })
         }
